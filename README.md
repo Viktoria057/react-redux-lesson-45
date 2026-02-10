@@ -1,3 +1,57 @@
+# 🚀 ДЗ 46.1. Рефакторинг існуючого Redux Toolkit проекту з використанням асинхронних дій
+
+## 📌 Опис проєкту
+
+Цей проект є результатом рефакторингу React-додатка, побудованого на **Vite**. Основна мета роботи — впровадження асинхронної логіки в Redux Toolkit за допомогою **Redux Thunk** (`createAsyncThunk`) для ефективного управління станом при роботі з зовнішніми API.
+
+---
+
+## 🔗 Посилання на проект
+* **Демо (Live Host):** https://react-redux-lesson-45.vercel.app/
+* **Репозиторій:** https://github.com/Viktoria057/react-redux-lesson-45.git
+
+---
+
+## 🛠️ Використані технології
+
+* **Frontend:** React (Vite)
+* **State Management:** Redux Toolkit (Slices, createAsyncThunk)
+* **Data Fetching:** Axios / Fetch API
+* **UI Updates:** useDispatch, useSelector
+
+---
+
+### Підготовка та ініціалізація
+- Проект розгорнуто за допомогою **Vite**.
+- Встановлено та налаштовано `@reduxjs/toolkit` та `react-redux`.
+
+### Взаємодія з компонентами
+- Використано хук `useDispatch` для запуску асинхронних дій.
+- Використано хук `useSelector` для отримання даних, статусу завантаження та тексту помилок.
+
+---
+
+
+## 📂 Структура проєкту
+`````
+my-redux-app/
+├── src/
+│ ├── redux/
+│ │ ├── store.js
+│ │ ├── slices/
+│ │ │ └── messageSlice.js
+│ ├── components/
+│ │ ├── MessageComponent.jsx
+│ ├── App.jsx
+│ ├── main.jsx
+│ └── index.css
+├── package.json
+├── README.md
+└── ...
+`````
+
+
+
 # ДЗ — Міграція глобального стану з React Context / Props на Redux
 
 ## 📌 Опис проєкту
@@ -11,10 +65,6 @@
 - створення Redux store та slices;
 - використання селекторів і дій для взаємодії зі станом;
 - підключення Redux до React-додатку.
-
-Проєкт ініціалізовано за допомогою **Vite**.
-
----
 
 ## 🛠️ Використані технології
 
@@ -34,9 +84,9 @@ my-redux-app/
 │ ├── redux/
 │ │ ├── store.js
 │ │ ├── slices/
-│ │ │ └── exampleSlice.js
+│ │ │ └── messageSlice.js
 │ ├── components/
-│ │ ├── ExampleComponent.jsx
+│ │ ├── MessageComponent.jsx
 │ ├── App.jsx
 │ ├── main.jsx
 │ └── index.css
